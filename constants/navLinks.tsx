@@ -33,9 +33,9 @@ const navLinks: NavLink[] = [
   },
   {
     buttonProps: { color: "info" },
-    href: "/blog",
+    href: "/long-story",
     Icon: <TextSnippetIcon color="inherit" fontSize="inherit" />,
-    label: "Blog",
+    label: "Long story",
     order: 3,
   },
   {

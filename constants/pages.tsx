@@ -24,6 +24,11 @@ const pages: Pages = {
     description:
       'I am available as freelancer to do your projects, fill the form to contact to me.',
   },
+  longStory: {
+    title: 'Long story of my life',
+    description:
+      'This is the long "about me" version',
+  },
 };
 
 export default pages;

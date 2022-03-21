@@ -13,10 +13,6 @@ import {
 import ContainerGrid from "components/common/ContainerGrid";
 import SkillProgress from "components/common/SkillProgress";
 import SkillIcon from "./SkillIcon";
-// custom icons
-import IllustratorCCIcon from "components/icon/IllustratorCC";
-import LightroomCCIcon from "components/icon/LightroomCC";
-import PhotoshopIcon from "components/icon/Photoshop";
 // context
 import ComponentsContext from "context/componentsContext";
 // type
@@ -52,7 +48,12 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     {
       Icon: <SkillIcon name="css3-plain-wordmark" />,
       title: "CSS",
-      progressValue: 73,
+      progressValue: 78,
+    },
+    {
+      Icon: <SkillIcon name="sass-original" />,
+      title: "Sass",
+      progressValue: 68,
     },
     {
       Icon: <SkillIcon name="react-original" />,
@@ -82,7 +83,7 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     {
       Icon: <SkillIcon name="tailwindcss-plain" />,
       title: "Tailwind CSS",
-      progressValue: 76,
+      progressValue: 85,
     },
   ];
 
@@ -103,25 +104,89 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
       progressValue: 40,
     },
     {
-    Icon: <SkillIcon name="php-plain" />,
-    title: "PHP",
+      Icon: <SkillIcon name="php-plain" />,
+      title: "PHP",
       progressValue: 62,
     },
     {
-    Icon: <SkillIcon name="wordpress-plain" />,
-    title: "Wordpress",
+      Icon: <SkillIcon name="wordpress-plain" />,
+      title: "Wordpress",
       progressValue: 66,
     },
     {
-    Icon: <SkillIcon name="symfony-original" />,
-    title: "Laravel",
+      Icon: <SkillIcon name="laravel-plain" />,
+      title: "Laravel",
       progressValue: 21,
+    },
+    {
+      Icon: <SkillIcon name="mongodb-plain" />,
+      title: "MongoDB",
+      progressValue: 58,
+    },
+    {
+      Icon: <SkillIcon name="mysql-plain" />,
+      title: "MySQL",
+      progressValue: 48,
+    },
+    {
+      Icon: <SkillIcon name="firebase-plain" />,
+      title: "Firebase",
+      progressValue: 38,
+    },
+  ];
+
+  const otherSkills = [
+    {
+      Icon: <SkillIcon name="npm-original-wordmark" />,
+      title: "NPM",
+      progressValue: 88,
+    },
+    {
+      Icon: <SkillIcon name="yarn-plain" />,
+      title: "Yarn",
+      progressValue: 69,
+    },
+    {
+      Icon: <SkillIcon name="git-plain" />,
+      title: "git",
+      progressValue: 84,
+    },
+    {
+      Icon: <SkillIcon name="bitbucket-original" />,
+      title: "Bitbucket",
+      progressValue: 70,
+    },
+    {
+      Icon: <SkillIcon name="github-original" />,
+      title: "Github",
+      progressValue: 70,
+    },
+    {
+      Icon: <SkillIcon name="jira-plain" />,
+      title: "Jira",
+      progressValue: 68,
+    },
+    {
+      Icon: <SkillIcon name="docker-plain" />,
+      title: "Docker",
+      progressValue: 65,
+    },
+    {
+      Icon: <SkillIcon name="jenkins-plain" />,
+      title: "Jenkins",
+      progressValue: 45,
+    },
+    {
+      Icon: <SkillIcon name="kubernetes-plain" />,
+      title: "Kubernetes",
+      progressValue: 2,
     },
   ];
 
   const allSkills = [
     { title: "Front-end skills", scores: frontendSkills },
     { title: "Back-end skills", scores: backendSkills },
+    { title: "Other skills", scores: otherSkills },
   ];
 
   return (
@@ -136,12 +201,12 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
               <CustomGridItem
                 item
                 key={`${skill.title} - ${skill.progressValue} - ${index}`}
-                xs={12}
-                sm={6}
-                md={4}
+                xs={6}
+                sm={4}
+                md={2}
               >
                 <SkillProgress
-                  size={100}
+                  size={60}
                   value={skill.progressValue}
                   Icon={skill.Icon}
                   subtitle={`${skill.title} | ${skill.progressValue}%`}
@@ -151,28 +216,6 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
           </ContainerGrid>
         </>
       ))}
-
-      {/* <Typography component="h2" variant="h4" textAlign="center">
-          My Back-end Skills
-        </Typography>
-        <ContainerGrid marginTop="2rem">
-          {frontendSkills.map((skill, index) => (
-            <CustomGridItem
-              item
-              key={`${skill.title} - ${skill.progressValue} - ${index}`}
-              xs={12}
-              sm={6}
-              md={4}
-            >
-              <SkillProgress
-                size={100}
-                value={skill.progressValue}
-                Icon={skill.Icon}
-                subtitle={`${skill.title} | ${skill.progressValue}%`}
-              />
-            </CustomGridItem>
-          ))}
-        </ContainerGrid> */}
     </CustomContainer>
   );
 };
