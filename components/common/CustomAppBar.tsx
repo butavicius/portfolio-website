@@ -81,7 +81,7 @@ const CustomAppBar: React.FunctionComponent<CustomAppBarProps> = (props) => {
 
   return (
     <>
-      <CustomAppBarRoot position="sticky" ref={appBarRef}>
+      <CustomAppBarRoot position="fixed" ref={appBarRef}>
         <Container maxWidth={containerMaxWidth}>
           <CustomToolbar>
             <NameLogo

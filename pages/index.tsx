@@ -1,16 +1,17 @@
 // react
-import * as React from 'react';
+import * as React from "react";
 // custom component
-import About from 'components/section/About';
-import HireMe from 'components/section/HireMe';
-import HomeHero from 'components/section/HomeHero';
-import MainLayout from 'components/layout/MainLayout';
-import RecentProjects from 'components/section/RecentProjects';
-import Skills from 'components/section/Skills';
+import About from "components/section/About";
+import HireMe from "components/section/HireMe";
+import HomeHero from "components/section/HomeHero";
+import MainLayout from "components/layout/MainLayout";
+import RecentProjects from "components/section/RecentProjects";
+import Skills from "components/section/Skills";
 // custom context
-import ConstantsContext from 'context/constantsContext';
+import ConstantsContext from "context/constantsContext";
 // type
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
+import ScrollAnchor from "components/common/ScrollAnchor";
 
 const Home: NextPage = () => {
   const { pages } = React.useContext(ConstantsContext);
@@ -19,8 +20,14 @@ const Home: NextPage = () => {
     <>
       <MainLayout pageData={pages!.home}>
         <HomeHero />
-        <About />
-        <Skills />
+        <div>
+          <ScrollAnchor id="about" />
+          <About />
+        </div>
+        <div>
+          <ScrollAnchor id="skills" />
+          <Skills />
+        </div>
         <HireMe />
         <RecentProjects />
       </MainLayout>

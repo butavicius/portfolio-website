@@ -91,13 +91,13 @@ const About: React.FunctionComponent<AboutProps> = (props) => {
   }, [isUpMd]);
 
   return (
-    <CustomContainer id="about">
+    <CustomContainer>
       <CustomCard>
         <ContainerGrid sx={{ marginTop: 0, height: '100%' }}>
           <Grid item xs={12} md={6} style={{ padding: 0 }}>
             <ImageWrapper>
               <Image
-                alt="John Doe profile image"
+                alt="Simas playing violin"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center center"

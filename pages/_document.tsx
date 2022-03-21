@@ -1,11 +1,11 @@
 // react
-import * as React from 'react';
+import * as React from "react";
 // next
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document";
 // @emotion
-import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionServer from "@emotion/server/create-instance";
 // utility
-import createEmotionCache from 'utility/createEmotionCache';
+import createEmotionCache from "utility/createEmotionCache";
 
 export default class MyDocument extends Document {
   render() {
@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" href="/favicon.png" />
           <link rel="apple-touch-icon" href="/favicon.png" />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+          ></link>
         </Head>
         <body>
           <Main />
@@ -75,7 +79,7 @@ MyDocument.getInitialProps = async (ctx) => {
   const emotionStyles = extractCriticalToChunks(initialProps.html);
   const emotionStyleTags = emotionStyles.styles.map((style) => (
     <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      data-emotion={`${style.key} ${style.ids.join(" ")}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: style.css }}
