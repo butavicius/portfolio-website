@@ -31,7 +31,6 @@ interface ProjectCardProps extends CardProps {
   imageAlt: string;
   imageSrc: string;
   title: string;
-  likes: number;
   onButtonClick?: () => void;
 }
 
@@ -58,7 +57,7 @@ const ImageContainer = styled(Box)<BoxProps>(({ theme }) => ({
 }));
 
 const ProjectCard: React.FunctionComponent<ProjectCardProps> = (props) => {
-  const { imageAlt, imageSrc, likes, title, onButtonClick, ...otherProps } =
+  const { imageAlt, imageSrc, title, onButtonClick, ...otherProps } =
     props;
   const [isLoaded, setIsLoaded] = React.useState(false);
   const {
@@ -94,7 +93,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = (props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <List>
+        {/* <List>
           <ListItem>
             <ListItemIcon sx={{ minWidth: 'auto', marginRight: '0.5rem' }}>
               <Icon color="primary" sx={{ display: 'flex' }}>
@@ -111,7 +110,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = (props) => {
               )}
             </ListItemText>
           </ListItem>
-        </List>
+        </List> */}
         <CustomButton
           disableRipple
           variant="text"

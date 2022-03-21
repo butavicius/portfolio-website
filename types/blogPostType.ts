@@ -1,11 +1,9 @@
 // type
 import { Dayjs } from 'dayjs';
 
-import { BlogPostCategory } from 'types/categoryType';
 import { ImageProps } from 'types/imageType';
 
-export interface BlogPostDetails {
-  category: BlogPostCategory[];
+export interface BlogPost {
   date: Dayjs;
   id: string;
   image: ImageProps;
@@ -13,6 +11,4 @@ export interface BlogPostDetails {
   title: string;
 }
 
-export interface BlogPost extends BlogPostDetails {
-  likes: number;
-}
+

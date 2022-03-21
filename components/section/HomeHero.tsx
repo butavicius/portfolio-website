@@ -22,11 +22,11 @@ const HomeHero: React.FunctionComponent<HomeHeroProps> = (props) => {
       <Typography component="p" variant="h5" color="text.secondary">
         Hello, I&apos;m
       </Typography>
-      <Typography component="h1" variant="h2" fontWeight="bold">
-        John Doe
+      <Typography component="h1" variant="h2" fontWeight="bold" align="center">
+        Simas Butavičius 
       </Typography>
       <Box color="text.secondary">
-        <TypingEffect staticText="I am" text={['photographer', 'designer']} />
+        <TypingEffect staticText="I am" text={['front-end dev', 'back-end dev', 'looking for a job :)']} />
       </Box>
       <ScrollDown
         color={info.main}
