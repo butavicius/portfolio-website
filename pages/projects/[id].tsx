@@ -52,7 +52,7 @@ const ProjectPage: NextPage<ProjectPageProps> = (props) => {
 
   return (
     <Container sx={{p: 0}}>
-      <MainLayout pageData={{ title: parsedProject.title }}>
+      <MainLayout pageData={{ title: "Simas - " + parsedProject.title }}>
         <ProjectContainer maxWidth={containerMaxWidth as string}>
           <ProjectDetails project={parsedProject} />
           <Gallery images={parsedProject.images} />

@@ -3,7 +3,7 @@ import * as React from "react";
 // next
 import { useRouter } from "next/router";
 // @mui
-import { Grid, Grow } from "@mui/material";
+import { Box, Grid, Grow } from "@mui/material";
 // custom component
 import ContainerGrid from "components/common/ContainerGrid";
 // custom context
@@ -20,7 +20,7 @@ const ProjectsSection: React.FunctionComponent<ProjectsSectionProps> = (
   const router = useRouter();
 
   return (
-    <>
+    <Box sx={{marginTop: '64px'}}>
       <ContainerGrid
         justifyContent={
           projects?.length === 1 ? "center" : "flex-start"
@@ -57,7 +57,7 @@ const ProjectsSection: React.FunctionComponent<ProjectsSectionProps> = (
             ))
           : "no project"}
       </ContainerGrid>
-    </>
+    </Box>
   );
 };
 
