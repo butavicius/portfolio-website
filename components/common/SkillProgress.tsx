@@ -48,7 +48,7 @@ const SkillProgress: React.FunctionComponent<SkillProgressProps> = (props) => {
           </Box>
         </Box>
         {subtitle && (
-          <Typography variant="h6" component="div" sx={{ marginTop: '0.5rem' }}>
+          <Typography variant="body1" component="div" sx={{ marginTop: '0.5rem' }}>
             {subtitle}
           </Typography>
         )}
