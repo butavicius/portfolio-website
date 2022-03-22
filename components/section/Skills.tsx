@@ -174,12 +174,12 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     {
       Icon: <DevIcon tool="jira" />,
       title: "Jira",
-      progressValue: 68,
+      progressValue: 85,
     },
     {
       Icon: <DevIcon tool="docker" />,
       title: "Docker",
-      progressValue: 65,
+      progressValue: 68,
     },
     {
       Icon: <DevIcon tool="jenkins" />,

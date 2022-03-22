@@ -8,6 +8,7 @@ import CustomButton from 'components/common/CustomButton';
 import { ButtonProps } from '@mui/material';
 interface ButtonLinkProps extends ButtonProps {
   href?: string;
+  target?: string;
 }
 
 const CustomButtonWithRef = React.forwardRef<ButtonLinkProps, ButtonLinkProps>(

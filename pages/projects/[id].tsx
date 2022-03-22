@@ -54,8 +54,8 @@ const ProjectPage: NextPage<ProjectPageProps> = (props) => {
     <Container sx={{p: 0}}>
       <MainLayout pageData={{ title: parsedProject.title }}>
         <ProjectContainer maxWidth={containerMaxWidth as string}>
-          <Gallery images={parsedProject.images} />
           <ProjectDetails project={parsedProject} />
+          <Gallery images={parsedProject.images} />
           <Markdown content={content} />
         </ProjectContainer>
       </MainLayout>
