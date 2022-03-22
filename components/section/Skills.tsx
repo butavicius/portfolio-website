@@ -12,7 +12,7 @@ import {
 // custom component
 import ContainerGrid from "components/common/ContainerGrid";
 import SkillProgress from "components/common/SkillProgress";
-import SkillIcon from "./SkillIcon";
+import SkillIcon from "../icon/SkillIcon";
 // context
 import ComponentsContext from "context/componentsContext";
 // type
@@ -46,6 +46,11 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
       progressValue: 92,
     },
     {
+      Icon: <SkillIcon name="typescript-plain" />,
+      title: "TypeScript",
+      progressValue: 81,
+    },
+    {
       Icon: <SkillIcon name="css3-plain-wordmark" />,
       title: "CSS",
       progressValue: 78,
@@ -63,7 +68,7 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     {
       Icon: <SkillIcon name="react-original" />,
       title: "React Native",
-      progressValue: 78,
+      progressValue: 72,
     },
     {
       Icon: <SkillIcon name="redux-original" />,
@@ -135,7 +140,12 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     },
   ];
 
-  const otherSkills = [
+  const devopsSkills = [
+    {
+      Icon: <SkillIcon name="linux-plain" />,
+      title: "Linux",
+      progressValue: 56,
+    },
     {
       Icon: <SkillIcon name="npm-original-wordmark" />,
       title: "NPM",
@@ -186,7 +196,7 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   const allSkills = [
     { title: "Front-end skills", scores: frontendSkills },
     { title: "Back-end skills", scores: backendSkills },
-    { title: "Other skills", scores: otherSkills },
+    { title: "DevOps skills etc.", scores: devopsSkills },
   ];
 
   return (

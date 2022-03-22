@@ -6,6 +6,10 @@ export interface Project {
   images: ImageProps[];
   postFileName: string;
   title: string;
+  stack?: {
+    label: string,
+    icons: string[]
+  }[]
 }
 
 const projectsData: Project[] = [
@@ -55,6 +59,44 @@ const projectsData: Project[] = [
         width: 6000,
         height: 4000,
         src: "/projects/bride/joeyy-lee-y56-YywiKUA-unsplash.jpg",
+      },
+    ],
+  },
+  {
+    id: "bis",
+    postFileName: "bridephotoshoot",
+    title: "Business website",
+    images: [
+      {
+        alt: "Website screenshot",
+        width: 1440,
+        height: 850,
+        src: "/projects/bis/bis-laptop1.png",
+      },
+      {
+        alt: "Website screenshot",
+        width: 440,
+        height: 870,
+        src: "/projects/bis/bis-phone1.png",
+      },
+    ],
+  },
+  {
+    id: "hairmaskdesign",
+    postFileName: "bridephotoshoot",
+    title: "Hair mask box design",
+    images: [
+      {
+        alt: "White and green labeled soft hair mask tube",
+        height: 3903,
+        src: "/projects/tube/glenn-claire-aYrOtqypmho-unsplash.jpg",
+        width: 3741,
+      },
+      {
+        alt: "Black and White usb hair mask box and tube",
+        height: 4000,
+        src: "/projects/tube/glenn-claire-DuNXXPScbJM-unsplash.jpg",
+        width: 5193,
       },
     ],
   },

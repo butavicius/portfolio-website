@@ -20,7 +20,7 @@ const HomeHero: React.FunctionComponent<HomeHeroProps> = (props) => {
   return (
     <CenterBox flexDirection="column">
       <Typography component="p" variant="h5" color="text.secondary">
-        Hello, I&apos;m
+        Hello, my name is
       </Typography>
       <Typography component="h1" variant="h2" fontWeight="bold" align="center">
         Simas Butavičius 

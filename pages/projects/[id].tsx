@@ -1,27 +1,27 @@
 // react
-import * as React from 'react';
+import * as React from "react";
 // reading-time
-import readingTime from 'reading-time';
+import readingTime from "reading-time";
 // @mui
-import { Box, BoxProps, Grid, styled } from '@mui/material';
+import { Box, BoxProps, Container, Grid, styled } from "@mui/material";
 // custom component
-import ContainerGrid from 'components/common/ContainerGrid';
-import Gallery from 'components/common/Gallery';
-import MainLayout from 'components/layout/MainLayout';
-import Markdown from 'components/common/Markdown';
-import ProjectDetails from 'components/section/ProjectDetails';
+import Gallery from "components/common/Gallery";
+import MainLayout from "components/layout/MainLayout";
+import Markdown from "components/common/Markdown";
 // projects data
-import projectsData, { Project } from 'constants/projectsData';
+import projectsData, { Project } from "constants/projectsData";
+import ProjectDetails from "components/section/ProjectDetails";
 // custom lib
-import { getAllProjectsId, getProjectData } from 'lib/projects';
+import { getAllProjectsId, getProjectData } from "lib/projects";
 // type
 import type {
   GetStaticPaths,
   GetStaticProps,
   GetStaticPropsContext,
   NextPage,
-} from 'next';
-import ProjectNotFound from 'components/section/ProjectNotFound';
+} from "next";
+import ProjectNotFound from "components/section/ProjectNotFound";
+import ComponentsContext from "context/componentsContext";
 
 interface ProjectPageProps {
   project?: string;
@@ -29,18 +29,19 @@ interface ProjectPageProps {
 }
 
 const ProjectContainer = styled(Box)<BoxProps>(({ theme }) => ({
-  margin: '5rem 1rem 1rem',
-  [theme.breakpoints.up('sm')]: {
-    margin: '5rem 2rem 1rem',
+  margin: "5rem 1rem 1rem",
+  [theme.breakpoints.up("sm")]: {
+    margin: "5rem 2rem 1rem",
   },
 }));
 
 const ProjectPage: NextPage<ProjectPageProps> = (props) => {
-  const { project, content = '' } = props;
+  const { project, content = "" } = props;
   const contentStats = readingTime(content);
+  const { containerMaxWidth = "lg" } = React.useContext(ComponentsContext);
 
   const NotFound = (
-    <MainLayout pageData={{ title: 'Project Not Found' }}>
+    <MainLayout pageData={{ title: "Project Not Found" }}>
       <ProjectNotFound />
     </MainLayout>
   );
@@ -50,28 +51,15 @@ const ProjectPage: NextPage<ProjectPageProps> = (props) => {
   const parsedProject: Project = JSON.parse(project);
 
   return (
-    <>
+    <Container sx={{p: 0}}>
       <MainLayout pageData={{ title: parsedProject.title }}>
-        <ProjectContainer>
-          <ContainerGrid>
-            <Grid item xs={12} md={8}>
-              <Gallery images={parsedProject.images} />
-            </Grid>
-            <Grid item xs>
-              <ProjectDetails
-                project={parsedProject}
-                readTime={Math.ceil(contentStats.minutes)}
-              />
-            </Grid>
-          </ContainerGrid>
-          <ContainerGrid>
-            <Grid item xs={12} md={8}>
-              <Markdown content={content} />
-            </Grid>
-          </ContainerGrid>
+        <ProjectContainer maxWidth={containerMaxWidth as string}>
+          <Gallery images={parsedProject.images} />
+          <ProjectDetails project={parsedProject} />
+          <Markdown content={content} />
         </ProjectContainer>
       </MainLayout>
-    </>
+    </Container>
   );
 };
 
@@ -108,6 +96,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 };

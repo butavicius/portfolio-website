@@ -26,14 +26,14 @@
     width: 6rem;
     img {
       filter: contrast(0.6);
-      transform: scale(1);
+      transform: scale(0.9);
       transition: all 0.2s ease-in-out;
     }
   }
   :global(.swiper-slide-thumb-active) {
     img {
       filter: contrast(1);
-      transform: scale(1.1);
+      transform: scale(1);
       transition: all 0.2s ease-in-out;
     }
   }

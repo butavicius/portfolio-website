@@ -1,16 +1,16 @@
 // react
-import * as React from 'react';
+import * as React from "react";
 // @mui
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 // swiper
-import SwiperCore, { Thumbs, Navigation, Scrollbar, FreeMode } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Thumbs, Navigation, Scrollbar, FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 // custom component
-import ImageWithSkeleton from 'components/common/ImageWithSkeleton';
+import ImageWithSkeleton from "components/common/ImageWithSkeleton";
 // style
-import classes from 'styles/components/Gallery.module.scss';
+import classes from "styles/components/Gallery.module.scss";
 // type
-import { ImageProps } from 'types/imageType';
+import { ImageProps } from "types/imageType";
 interface GalleryProps {
   images: ImageProps[];
 }
@@ -19,11 +19,11 @@ const Gallery: React.FunctionComponent<GalleryProps> = (props) => {
   const { images } = props;
   const [swiperThumbs, setSwiperThumbs] = React.useState<SwiperCore>();
   const { breakpoints } = useTheme();
-  const isUpSm = useMediaQuery(breakpoints.up('sm'));
+  const isUpSm = useMediaQuery(breakpoints.up("sm"));
 
   return (
     <>
-      <Box className={classes.galleryWrapper}>
+      <Box className={classes.galleryWrapper} style={{ maxWidth: 1200 }}>
         <Swiper
           modules={[Navigation, Scrollbar, Thumbs]}
           navigation={isUpSm ? true : false}
@@ -31,7 +31,7 @@ const Gallery: React.FunctionComponent<GalleryProps> = (props) => {
           thumbs={{ swiper: swiperThumbs }}
         >
           {images.map((image, index) => (
-            <SwiperSlide key={image.alt + index} style={{ height: '26rem' }}>
+            <SwiperSlide key={image.alt + index} style={{ height: "32rem" }}>
               <ImageWithSkeleton
                 alt={image.alt}
                 layout="fill"
@@ -52,13 +52,15 @@ const Gallery: React.FunctionComponent<GalleryProps> = (props) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={image.alt + index} className="swiper-slide-auto">
-              <ImageWithSkeleton
-                alt={image.alt}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                src={image.src}
-              />
+              <Box sx={{ pt: 3 }}>
+                <ImageWithSkeleton
+                  alt={image.alt}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                  src={image.src}
+                />
+              </Box>
             </SwiperSlide>
           ))}
         </Swiper>

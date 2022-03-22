@@ -71,8 +71,8 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = (props) => {
           alt={imageAlt}
           src={imageSrc}
           layout="fill"
-          objectFit="cover"
-          objectPosition="top center"
+          objectFit="contain"
+          objectPosition="center center"
           onLoad={() => setIsLoaded(true)}
           quality={30}
         />
