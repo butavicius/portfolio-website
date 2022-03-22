@@ -12,7 +12,7 @@ import {
 // custom component
 import ContainerGrid from "components/common/ContainerGrid";
 import SkillProgress from "components/common/SkillProgress";
-import SkillIcon from "../icon/SkillIcon";
+import DevIcon from "../icon/DevIcon";
 // context
 import ComponentsContext from "context/componentsContext";
 // type
@@ -36,57 +36,57 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
   const frontendSkills = [
     {
-      Icon: <SkillIcon name="html5-plain-wordmark" />,
+      Icon: <DevIcon tool="html" />,
       title: "HTML",
       progressValue: 88,
     },
     {
-      Icon: <SkillIcon name="javascript-plain" />,
+      Icon: <DevIcon tool="javascript" />,
       title: "JavaScript",
       progressValue: 92,
     },
     {
-      Icon: <SkillIcon name="typescript-plain" />,
+      Icon: <DevIcon tool="typescript" />,
       title: "TypeScript",
       progressValue: 81,
     },
     {
-      Icon: <SkillIcon name="css3-plain-wordmark" />,
+      Icon: <DevIcon tool="css" />,
       title: "CSS",
       progressValue: 78,
     },
     {
-      Icon: <SkillIcon name="sass-original" />,
+      Icon: <DevIcon tool="sass" />,
       title: "Sass",
       progressValue: 68,
     },
     {
-      Icon: <SkillIcon name="react-original" />,
+      Icon: <DevIcon tool="react" />,
       title: "React",
       progressValue: 86,
     },
     {
-      Icon: <SkillIcon name="react-original" />,
+      Icon: <DevIcon tool="reactNative" />,
       title: "React Native",
       progressValue: 72,
     },
     {
-      Icon: <SkillIcon name="redux-original" />,
+      Icon: <DevIcon tool="redux" />,
       title: "Redux",
       progressValue: 81,
     },
     {
-      Icon: <SkillIcon name="nextjs-original" />,
+      Icon: <DevIcon tool="nextjs" />,
       title: "Next.js",
       progressValue: 70,
     },
     {
-      Icon: <SkillIcon name="materialui-plain" />,
+      Icon: <DevIcon tool="mui" />,
       title: "MUI",
       progressValue: 62,
     },
     {
-      Icon: <SkillIcon name="tailwindcss-plain" />,
+      Icon: <DevIcon tool="tailwindcss" />,
       title: "Tailwind CSS",
       progressValue: 85,
     },
@@ -94,47 +94,47 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
   const backendSkills = [
     {
-      Icon: <SkillIcon name="nodejs-plain" />,
+      Icon: <DevIcon tool="nodejs" />,
       title: "Node.js",
       progressValue: 72,
     },
     {
-      Icon: <SkillIcon name="java-plain" />,
+      Icon: <DevIcon tool="java" />,
       title: "Java",
       progressValue: 48,
     },
     {
-      Icon: <SkillIcon name="spring-plain" />,
+      Icon: <DevIcon tool="spring" />,
       title: "Spring",
       progressValue: 40,
     },
     {
-      Icon: <SkillIcon name="php-plain" />,
+      Icon: <DevIcon tool="php" />,
       title: "PHP",
       progressValue: 62,
     },
     {
-      Icon: <SkillIcon name="wordpress-plain" />,
+      Icon: <DevIcon tool="wordpress" />,
       title: "Wordpress",
       progressValue: 66,
     },
     {
-      Icon: <SkillIcon name="laravel-plain" />,
+      Icon: <DevIcon tool="laravel" />,
       title: "Laravel",
       progressValue: 21,
     },
     {
-      Icon: <SkillIcon name="mongodb-plain" />,
+      Icon: <DevIcon tool="mongodb" />,
       title: "MongoDB",
       progressValue: 58,
     },
     {
-      Icon: <SkillIcon name="mysql-plain" />,
+      Icon: <DevIcon tool="mysql" />,
       title: "MySQL",
       progressValue: 48,
     },
     {
-      Icon: <SkillIcon name="firebase-plain" />,
+      Icon: <DevIcon tool="firebase" />,
       title: "Firebase",
       progressValue: 38,
     },
@@ -142,52 +142,52 @@ const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
   const devopsSkills = [
     {
-      Icon: <SkillIcon name="linux-plain" />,
+      Icon: <DevIcon tool="linux" />,
       title: "Linux",
       progressValue: 56,
     },
     {
-      Icon: <SkillIcon name="npm-original-wordmark" />,
+      Icon: <DevIcon tool="npm" />,
       title: "NPM",
       progressValue: 88,
     },
     {
-      Icon: <SkillIcon name="yarn-plain" />,
+      Icon: <DevIcon tool="yarn" />,
       title: "Yarn",
       progressValue: 69,
     },
     {
-      Icon: <SkillIcon name="git-plain" />,
+      Icon: <DevIcon tool="git" />,
       title: "git",
       progressValue: 84,
     },
     {
-      Icon: <SkillIcon name="bitbucket-original" />,
+      Icon: <DevIcon tool="bitbucket" />,
       title: "Bitbucket",
       progressValue: 70,
     },
     {
-      Icon: <SkillIcon name="github-original" />,
+      Icon: <DevIcon tool="github" />,
       title: "Github",
       progressValue: 70,
     },
     {
-      Icon: <SkillIcon name="jira-plain" />,
+      Icon: <DevIcon tool="jira" />,
       title: "Jira",
       progressValue: 68,
     },
     {
-      Icon: <SkillIcon name="docker-plain" />,
+      Icon: <DevIcon tool="docker" />,
       title: "Docker",
       progressValue: 65,
     },
     {
-      Icon: <SkillIcon name="jenkins-plain" />,
+      Icon: <DevIcon tool="jenkins" />,
       title: "Jenkins",
       progressValue: 45,
     },
     {
-      Icon: <SkillIcon name="kubernetes-plain" />,
+      Icon: <DevIcon tool="kubernetes" />,
       title: "Kubernetes",
       progressValue: 2,
     },

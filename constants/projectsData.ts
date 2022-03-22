@@ -6,10 +6,8 @@ export interface Project {
   images: ImageProps[];
   postFileName: string;
   title: string;
-  stack?: {
-    label: string,
-    icons: string[]
-  }[]
+  technologies?: string[];
+  link?: string;
 }
 
 const projectsData: Project[] = [
@@ -66,12 +64,38 @@ const projectsData: Project[] = [
     id: "bis",
     postFileName: "bridephotoshoot",
     title: "Business website",
+    technologies: ["php", "javascript", "wordpress", "jquery"],
+    link: "https://www.bis.lt",
     images: [
       {
         alt: "Website screenshot",
         width: 1440,
         height: 850,
         src: "/projects/bis/bis-laptop1.png",
+      },
+      {
+        alt: "Website screenshot",
+        width: 1440,
+        height: 850,
+        src: "/projects/bis/bis-laptop2.png",
+      },
+      {
+        alt: "Website screenshot",
+        width: 1440,
+        height: 850,
+        src: "/projects/bis/bis-laptop3.png",
+      },
+      {
+        alt: "Website screenshot",
+        width: 440,
+        height: 870,
+        src: "/projects/bis/bis-phone3.png",
+      },
+      {
+        alt: "Website screenshot",
+        width: 440,
+        height: 870,
+        src: "/projects/bis/bis-phone2.png",
       },
       {
         alt: "Website screenshot",
